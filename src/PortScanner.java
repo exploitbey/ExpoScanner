@@ -54,8 +54,8 @@ public class PortScanner {
             havuz.submit(() -> {
                 try {
                     Socket soket = new Socket();
-                    // Baglanti 200 ms icinde olmazsa zaman asimi at
-                    soket.connect(new InetSocketAddress(hedef, portNumarasi), 200); 
+                    // Baglanti 2000 ms icinde olmazsa zaman asimi at
+                    soket.connect(new InetSocketAddress(hedef, portNumarasi), 2000); 
                     soket.close();
                     
                     System.out.println("[+] Acik port -> " + portNumarasi);
